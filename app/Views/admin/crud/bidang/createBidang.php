@@ -10,7 +10,7 @@
     <!-- DataTales Example -->
     <div class="card shadow md-2">
         <div class="card-body">
-            <form action="<?= 'add-bidang' ?>" method="POST" class="form-horizontal">
+            <form action="<?= base_url('admin/add-bidang'); ?>" method="POST" class="form-horizontal">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
                     <label for="bidang" class="col-sm-2 col-form-label">Nama Bidang</label>

@@ -10,19 +10,26 @@
     <!-- DataTales Example -->
     <div class="card shadow md-2">
         <div class="card-body">
-            <form action="<? 'update' ?>" method="POST" class="form-horizontal">
+            <form action="<?= base_url('admin/bidang/edit/' . $bidang->id) ?>" method="POST" class="form-horizontal">
                 <? csrf_field() ?>
                 <div class="mb-3 row">
                     <label for="bidang" class="col-sm-2 col-form-label">Nama Bidang</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-lg" id="bidang" name="bidang"
+                        <input type="text" class="form-control form-control-lg" id="id" name="id"
+                            value="<?= $bidang->id; ?>">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="bidang" class="col-sm-2 col-form-label">Nama Bidang</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg" id="nama" name="nama"
                             value="<?= $bidang->nama; ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary mb-3" value="Simpan">
-                        <a href="<?= 'bidang' ?>" class="btn btn-success mb-3">Kembali</a>
+                        <a href="<?= base_url('admin/bidang') ?>" class="btn btn-success mb-3">Kembali</a>
                     </div>
                 </div>
             </form>

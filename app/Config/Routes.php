@@ -38,11 +38,16 @@ $routes->group('admin', static function ($routes) {
     $routes->get('bidang', 'Admin\Home::bidang');
 
     $routes->get('add-indikator', 'Admin\Indikator::createIndikator');
-    $routes->get('edit-indikator', 'Admin\Indikator::editIndikator');
+    $routes->post('add-indikator', 'Admin\Indikator::simpan');
+    $routes->get('edit-indikator/(:num)', 'Admin\Indikator::editIndikator/$1');
+    $routes->post('edit-indikator/(:num)', 'Admin\Indikator::updateIndikator/$1');
+
 
     $routes->get('add-bidang', 'Admin\Bidang::createBidang');
     $routes->post('add-bidang', 'Admin\Bidang::saveBidang');
     $routes->get('bidang/edit/(:num)', 'Admin\Bidang::edit/$1');
+    $routes->post('bidang/edit/(:num)', 'Admin\Bidang::bidang_update/$1');
+    $routes->post('bidang/delete/(:num)', 'Admin\Bidang::delete/$1');
 });
 
 

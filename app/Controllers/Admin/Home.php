@@ -29,6 +29,7 @@ class Home extends BaseController
     {
         $indikators = new IndikatorModel();
         $indikator = $indikators->getAll();
+        // dd($indikator);
         return view('admin/indikator', [
             'indikator' => $indikator,
             'title' => 'DINSA - Admin - Indikator'

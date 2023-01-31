@@ -17,4 +17,11 @@ class BidangModel extends Model
         'nama',
         'id'
     ];
+    // function editBidang()
+    // {
+    //     $id = $this->request->getPost('id');
+    //     $bidang = $this->request->getPost('nama');
+
+    //     $sql = "UPDATE bidang SET nama= '$bidang' WHERE id='$id'";
+    // }
 }

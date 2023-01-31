@@ -9,6 +9,11 @@ use App\Controllers\BaseController;
 
 class Bidang extends BaseController
 {
+    protected $bidangModel;
+    public function __construct()
+    {
+        $this->bidangModel = new BidangModel();
+    }
     //view add & edit bidang
     function createBidang()
     {
@@ -28,14 +33,20 @@ class Bidang extends BaseController
     //simpan input
     public function saveBidang()
     {
-        $bidangModel = new BidangModel();
         $data = $this->request->getPost();
-        $bidangModel->insert($data);
+        $this->bidangModel->insert($data);
         return redirect('admin/bidang')->with('success', 'Data berhasil disimpan');
     }
 
     public function bidang_update($id)
     {
-        $bidangModel = new BidangModel();
+        $data = $this->request->getPost();
+        $this->bidangModel->update($id, $data);
+        return redirect('admin/bidang')->with('success', 'Data berhasil disimpan');
+    }
+    public function delete($id)
+    {
+        $this->bidangModel->where('id', $id)->delete();
+        return redirect('admin/bidang')->with('success', 'Data berhasil dihapus');
     }
 }

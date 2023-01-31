@@ -14,23 +14,30 @@
                 class="form-horizontal">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
-                    <label for="bidang" class="col-sm-2 col-form-label">Bidang</label>
+                    <label for="bidang" class="col-sm-2 col-form-label">Unit Kerja</label>
                     <div class="col-sm-10">
                         <select class="form-control form-control-lg" name="idBidang" id="idBidang">
-                            <option><?= $bidang->nama; ?></option>
-                            <?php foreach ($bidang as $data) { ?>
-                            <option name="idBidang" value="<?= $bidang->id; ?>"
-                                <?= $indikator->idBidang == $bidang->id ? 'selected' : null ?>>
-                                <?= $bidang->nama; ?></option>
-                            <?php } ?>
+                            <option></option>
+                            <option name="idBidang" value=""></option>
                         </select>
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                    <label for="bidang" class="col-sm-2 col-form-label">Bidang</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-lg" id="deskripsi" name="deskripsi"
-                            value="<?= $indikator->deskripsi; ?>">
+                        <select class="form-control form-control-lg" name="idBidang" id="idBidang">
+                            <option></option>
+                            <option name="idBidang" value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="deskripsi" class="col-sm-2 col-form-label">Indikator</label>
+                    <div class="col-sm-10">
+                        <select class="form-control form-control-lg" name="indikator" id="indikator">
+                            <option>Pilih Indikator</option>
+                            <option name="idBidang" value=""></option>
+                        </select>
                     </div>
                 </div>
                 <div class="mb-3 row">

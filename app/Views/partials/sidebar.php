@@ -15,40 +15,30 @@
             </a>
 
             <!-- Divider -->
-            <!-- <hr class="sidebar-divider my-0"> -->
-
-            <!-- Nav Item - Dashboard -->
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li> -->
-
-            <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?= 'indikator' ?>">
+                <a class="nav-link collapsed" href="<?= base_url('admin/indikator') ?>">
                     <i class="far fa-check-circle"></i>
                     <span>Indikator</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?= 'capaian' ?>">
+                <a class="nav-link collapsed" href="<?= base_url('admin/capaian') ?>">
                     <i class="fa fa-list-alt"></i>
                     <span>Capaian</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?= 'bidang' ?>">
+                <a class="nav-link collapsed" href="<?= base_url('admin/bidang') ?>">
                     <i class="fa fa-building"></i>
                     <span>Bidang</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?= 'akun' ?>">
+                <a class="nav-link collapsed" href="<?= base_url('admin/akun') ?>">
                     <i class="fas fa-users"></i>
                     <span>Akun</span>
                 </a>

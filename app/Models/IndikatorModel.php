@@ -15,13 +15,13 @@ class IndikatorModel extends Model
     protected $useSoftDeletes = false;
 
     protected $allowedFields = [
-        'idBidang', 'deskripsi', 'bentuk', 'satuan', 'jenis', 'kode_perkin', 'kode_konkin', 'hitung', 'nama'
+        'id', 'idBidang', 'deskripsi', 'bentuk', 'satuan', 'jenis', 'kode_perkin', 'kode_konkin', 'hitung', 'nama'
     ];
 
     function getAll()
     {
         $builder = $this->db->table('indikator');
-        $builder->join('bidang', 'bidang.id = indikator.idBidang');
+        $builder->join('bidang', 'indikator.idBidang = bidang.id');
         $query = $builder->get();
         return $query->getResult();
     }
