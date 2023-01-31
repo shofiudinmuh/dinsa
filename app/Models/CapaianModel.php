@@ -21,7 +21,7 @@ class CapaianModel extends Model
     {
         $builder = $this->db->table('capaian');
         $builder->join('bidang', 'bidang.id = capaian.idBidang');
-        $builder->join('indikator', 'indikator.id= capaian.idIndikator');
+        $builder->join('indikator', 'indikator.id_indikator = capaian.idIndikator');
         $query = $builder->get();
         return $query->getResult();
     }

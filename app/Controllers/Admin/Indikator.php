@@ -51,12 +51,14 @@ class Indikator extends BaseController
     //edit indikator
     function updateIndikator($id)
     {
-        //
+        $data = $this->request->getPost();
+        $this->indikatorModel->update($id, $data);
+        return redirect('admin/indikator')->with('success', 'Data berhasil disimpan');
     }
     //delete indikator
     public function delete($id)
     {
-        $this->indikatorModel->where('id', $id)->delete();
+        $this->indikatorModel->where('id_indikator', $id)->delete();
         return redirect('admin/indikator')->with('success', 'Data berhasil dihapus');
     }
 }

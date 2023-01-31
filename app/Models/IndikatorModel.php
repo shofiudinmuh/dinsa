@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class IndikatorModel extends Model
 {
     protected $table      = 'indikator';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_indikator';
 
     protected $useAutoIncrement = true;
 
@@ -15,7 +15,7 @@ class IndikatorModel extends Model
     protected $useSoftDeletes = false;
 
     protected $allowedFields = [
-        'id', 'idBidang', 'deskripsi', 'bentuk', 'satuan', 'jenis', 'kode_perkin', 'kode_konkin', 'hitung', 'nama'
+        'id_indikator', 'idBidang', 'deskripsi', 'bentuk', 'satuan', 'jenis', 'kode_perkin', 'kode_konkin', 'hitung', 'nama'
     ];
 
     function getAll()

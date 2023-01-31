@@ -10,18 +10,17 @@
     <!-- DataTales Example -->
     <div class="card shadow md-2">
         <div class="card-body">
-            <form action="<?= base_url('admin/edit-indikator/' . $indikator->id); ?>" method="POST"
+            <form action="<?= base_url('admin/edit-indikator/' . $indikator->id_indikator); ?>" method="POST"
                 class="form-horizontal">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
                     <label for="bidang" class="col-sm-2 col-form-label">Bidang</label>
                     <div class="col-sm-10">
                         <select class="form-control form-control-lg" name="idBidang" id="idBidang">
-                            <option><?= $bidang->nama; ?></option>
                             <?php foreach ($bidang as $data) { ?>
-                            <option name="idBidang" value="<?= $bidang->id; ?>"
-                                <?= $indikator->idBidang == $bidang->id ? 'selected' : null ?>>
-                                <?= $bidang->nama; ?></option>
+                            <option name="idBidang" value="<?= $data->id; ?>"
+                                <?= $indikator->idBidang == $data->id ? 'selected' : null ?>>
+                                <?= $data->nama; ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -72,7 +71,7 @@
                 <div class="mb-3 row">
                     <label for="kodeKonkin" class="col-sm-2 col-form-label">Kode Konkin</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-lg" id="kode_konkin" name="kode_ponkin"
+                        <input type="text" class="form-control form-control-lg" id="kode_konkin" name="kode_konkin"
                             value="<?= $indikator->kode_konkin; ?>">
                     </div>
                 </div>

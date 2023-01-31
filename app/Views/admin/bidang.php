@@ -46,7 +46,7 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col"></div>
-                                            <a href="<?= 'bidang/edit/' . $data->id ?>" type="button"
+                                            <a href="<?= base_url('bidang/edit/' . $data->id) ?>" type="button"
                                                 class="btn btn-success">Update</a>
                                             <input type="submit" class="btn btn-danger" value="Delete"></input>
                                         </div>
